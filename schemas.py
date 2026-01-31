@@ -1,0 +1,15 @@
+from pydantic import BaseModel, Field
+
+class AddressCreate(BaseModel):
+    name: str
+    latitude: float = Field(..., ge=-90, le=90)
+    longitude: float = Field(..., ge=-180, le=180)
+
+class AddressUpdate(AddressCreate):
+    pass
+
+class AddressOut(AddressCreate):
+    id: int
+
+    class Config:
+        orm_mode = True
