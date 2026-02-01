@@ -44,7 +44,7 @@ Aaddress_book_api/
 
 ---
 
-📄 File-by-File Explanation (Interview Friendly)
+📄 File-by-File Explanation
 
 main.py
 
